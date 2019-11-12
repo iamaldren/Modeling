@@ -18,10 +18,10 @@ import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dolphin;
 import com.aldren.modeling.service.CountService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Hello world!
- */
+@SpringBootApplication
 public class ModelingApp {
 
     public static void main(String[] args) {
@@ -129,6 +129,8 @@ public class ModelingApp {
         System.out.printf("%d animals can fly.\n", countService.getFlyingCount());
         System.out.printf("%d animals can sing.\n", countService.getSingingCount());
         System.out.printf("%d animals can swim.\n", countService.getSwimmingCount());
+
+        SpringApplication.run(ModelingApp.class, args);
     }
 
 }
