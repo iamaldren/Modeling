@@ -1,11 +1,16 @@
 package com.aldren.modeling.animalia.subclass.bird;
 
-import com.aldren.modeling.animalia.Animal;
+import com.aldren.modeling.animalia.domain.AerialAnimal;
+import com.aldren.modeling.animalia.domain.LandAnimal;
 
-public abstract class Bird implements Animal {
+public abstract class Bird implements LandAnimal {
 
-    public abstract void walk();
+    public void walk() {
+        System.out.println("I am walking.");
+    }
 
-    public abstract void fly();
+    public void makeSound() {
+        System.out.println("Chirp, chirp");
+    }
 
 }

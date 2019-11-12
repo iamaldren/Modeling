@@ -1,5 +1,7 @@
 package com.aldren.modeling;
 
+import com.aldren.modeling.animalia.subclass.bird.type.Chicken;
+import com.aldren.modeling.animalia.subclass.bird.type.Duck;
 import com.aldren.modeling.animalia.subclass.bird.type.SongBird;
 
 /**
@@ -17,5 +19,15 @@ public class ModelingApp
         bird.walk();
         bird.fly();
         bird.sing();
+
+        /**
+         * Question #A2
+         */
+        Duck duck = new Duck();
+        duck.swim();
+        duck.makeSound();
+
+        Chicken chicken = new Chicken();
+        chicken.makeSound();
     }
 }
