@@ -1,7 +1,6 @@
 package com.aldren.modeling.animalia.subclass.mammal.type;
 
 import com.aldren.modeling.BaseTest;
-import com.aldren.modeling.animalia.subclass.fish.Fish;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

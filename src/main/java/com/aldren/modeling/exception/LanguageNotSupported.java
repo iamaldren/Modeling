@@ -1,7 +1,5 @@
 package com.aldren.modeling.exception;
 
-import com.aldren.modeling.service.LanguageService;
-
 public class LanguageNotSupported extends Exception {
 
     private String message;

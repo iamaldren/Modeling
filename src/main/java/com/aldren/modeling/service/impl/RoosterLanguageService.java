@@ -24,6 +24,23 @@ public class RoosterLanguageService implements LanguageService {
 
     private Rooster rooster;
 
+    private static Properties readPropertiesFile(String fileName) throws IOException {
+        FileInputStream fis = null;
+        Properties prop = null;
+        try {
+            fis = new FileInputStream(fileName);
+            prop = new Properties();
+            prop.load(fis);
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } finally {
+            fis.close();
+        }
+        return prop;
+    }
+
     @PostConstruct
     public void setup() {
         rooster = new Rooster(env);
@@ -36,23 +53,6 @@ public class RoosterLanguageService implements LanguageService {
         response.setLanguage(language);
         response.setSound(sound);
         return response;
-    }
-
-    private static Properties readPropertiesFile(String fileName) throws IOException {
-        FileInputStream fis = null;
-        Properties prop = null;
-        try {
-            fis = new FileInputStream(fileName);
-            prop = new Properties();
-            prop.load(fis);
-        } catch(FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch(IOException ioe) {
-            ioe.printStackTrace();
-        } finally {
-            fis.close();
-        }
-        return prop;
     }
 
 }

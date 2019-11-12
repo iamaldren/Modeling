@@ -8,7 +8,8 @@ public class Parrot<T> extends Bird implements AerialAnimal {
 
     private Animal animal;
 
-    public Parrot() {}
+    public Parrot() {
+    }
 
     public Parrot(T animal) {
         this.animal = (Animal) animal;

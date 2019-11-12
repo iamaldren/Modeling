@@ -6,7 +6,8 @@ import com.aldren.modeling.animalia.subclass.insect.Insect;
 public class Butterfly extends Insect implements AerialAnimal {
 
     @Override
-    public void makeSound() {}
+    public void makeSound() {
+    }
 
     @Override
     public void fly() {

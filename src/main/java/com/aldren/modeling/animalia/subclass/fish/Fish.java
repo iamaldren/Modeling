@@ -9,7 +9,8 @@ public abstract class Fish implements OceanicAnimal {
     protected boolean isEatOtherFish;
     protected boolean isMakeJokes;
 
-    public Fish() {}
+    public Fish() {
+    }
 
     public Fish(String size, String color, boolean isEatOtherFish, boolean isMakeJokes) {
         this.size = size;
@@ -24,7 +25,9 @@ public abstract class Fish implements OceanicAnimal {
     }
 
     @Override
-    public void makeSound() { System.out.println("Bubble, bubble"); }
+    public void makeSound() {
+        System.out.println("Bubble, bubble");
+    }
 
     public String getSize() {
         return size;
