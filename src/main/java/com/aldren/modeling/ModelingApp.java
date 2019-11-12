@@ -1,5 +1,7 @@
 package com.aldren.modeling;
 
+import com.aldren.modeling.animalia.Animal;
+import com.aldren.modeling.animalia.subclass.amphibian.type.Frog;
 import com.aldren.modeling.animalia.subclass.bird.species.OrphanRooster;
 import com.aldren.modeling.animalia.subclass.bird.species.Rooster;
 import com.aldren.modeling.animalia.subclass.bird.type.Chicken;
@@ -15,11 +17,13 @@ import com.aldren.modeling.animalia.subclass.insect.type.Caterpillar;
 import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dolphin;
+import com.aldren.modeling.service.CountService;
 
 /**
  * Hello world!
  */
 public class ModelingApp {
+
     public static void main(String[] args) {
         /**
          * Question #A1
@@ -99,5 +103,32 @@ public class ModelingApp {
          */
         Caterpillar caterpillar = new Caterpillar();
         caterpillar.walk();
+
+        /**
+         * Question E1
+         */
+        Animal[] animals = new Animal[]{
+                new SongBird(),
+                new Duck(),
+                new Chicken(),
+                new Rooster(),
+                new Parrot<>(new Dog()),
+                new GenericFish(),
+                new Shark(),
+                new ClownFish(),
+                new Dolphin(),
+                new Butterfly(),
+                new Caterpillar(),
+                new Cat(),
+                new Dog(),
+                new Frog()
+        };
+        CountService countService = new CountService(animals);
+        countService.count();
+        System.out.printf("%d animals can walk.\n", countService.getWalkingCount());
+        System.out.printf("%d animals can fly.\n", countService.getFlyingCount());
+        System.out.printf("%d animals can sing.\n", countService.getSingingCount());
+        System.out.printf("%d animals can swim.\n", countService.getSwimmingCount());
     }
+
 }
