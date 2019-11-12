@@ -11,6 +11,7 @@ import com.aldren.modeling.animalia.subclass.fish.type.ClownFish;
 import com.aldren.modeling.animalia.subclass.fish.type.GenericFish;
 import com.aldren.modeling.animalia.subclass.fish.type.Shark;
 import com.aldren.modeling.animalia.subclass.insect.type.Butterfly;
+import com.aldren.modeling.animalia.subclass.insect.type.Caterpillar;
 import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dolphin;
@@ -92,5 +93,11 @@ public class ModelingApp {
         Butterfly butterfly = new Butterfly();
         butterfly.fly();
         butterfly.makeSound(); //Will not do anything
+
+        /**
+         * Question #D2
+         */
+        Caterpillar caterpillar = new Caterpillar();
+        caterpillar.walk();
     }
 }
