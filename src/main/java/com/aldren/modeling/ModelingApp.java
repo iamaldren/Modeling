@@ -7,7 +7,9 @@ import com.aldren.modeling.animalia.subclass.bird.type.Duck;
 import com.aldren.modeling.animalia.subclass.bird.type.Parrot;
 import com.aldren.modeling.animalia.subclass.bird.type.SongBird;
 import com.aldren.modeling.animalia.subclass.fish.Fish;
+import com.aldren.modeling.animalia.subclass.fish.type.ClownFish;
 import com.aldren.modeling.animalia.subclass.fish.type.GenericFish;
+import com.aldren.modeling.animalia.subclass.fish.type.Shark;
 import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 
@@ -60,5 +62,20 @@ public class ModelingApp {
          */
         Fish fish = new GenericFish();
         fish.swim();
+
+        /**
+         * Question #B2
+         */
+        Fish shark = new Shark();
+        System.out.println("Shark Size: " + shark.getSize());
+        System.out.println("Shark Color: " + shark.getColor());
+        System.out.println("Eating other fish? " + shark.isEatOtherFish());
+        System.out.println("Making jokes? " + shark.isMakeJokes());
+
+        Fish clownFish = new ClownFish();
+        System.out.println("Clownfish Size: " + clownFish.getSize());
+        System.out.println("Clownfish Color: " + clownFish.getColor());
+        System.out.println("Eating other fish? " + clownFish.isEatOtherFish());
+        System.out.println("Making jokes? " + clownFish.isMakeJokes());
     }
 }
