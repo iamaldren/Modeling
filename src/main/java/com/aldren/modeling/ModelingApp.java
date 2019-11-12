@@ -6,6 +6,8 @@ import com.aldren.modeling.animalia.subclass.bird.type.Chicken;
 import com.aldren.modeling.animalia.subclass.bird.type.Duck;
 import com.aldren.modeling.animalia.subclass.bird.type.Parrot;
 import com.aldren.modeling.animalia.subclass.bird.type.SongBird;
+import com.aldren.modeling.animalia.subclass.fish.Fish;
+import com.aldren.modeling.animalia.subclass.fish.type.GenericFish;
 import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 
@@ -52,5 +54,11 @@ public class ModelingApp {
 
         Parrot<Rooster> roosterParrot = new Parrot<>(new Rooster());
         roosterParrot.makeSound();
+
+        /**
+         * Question #B1
+         */
+        Fish fish = new GenericFish();
+        fish.swim();
     }
 }
