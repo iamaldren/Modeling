@@ -12,9 +12,13 @@ public class BaseTest {
     protected final PrintStream out = System.out;
 
     @Before
-    public void setup() { System.setOut(new PrintStream(content)); }
+    public void setup() {
+        System.setOut(new PrintStream(content));
+    }
 
     @After
-    public void cleanup() { System.setOut(out); }
+    public void cleanup() {
+        System.setOut(out);
+    }
 
 }

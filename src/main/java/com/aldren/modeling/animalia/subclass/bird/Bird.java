@@ -1,6 +1,5 @@
 package com.aldren.modeling.animalia.subclass.bird;
 
-import com.aldren.modeling.animalia.domain.AerialAnimal;
 import com.aldren.modeling.animalia.domain.LandAnimal;
 
 public abstract class Bird implements LandAnimal {
