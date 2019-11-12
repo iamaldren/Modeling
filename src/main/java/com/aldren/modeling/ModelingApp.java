@@ -12,6 +12,7 @@ import com.aldren.modeling.animalia.subclass.fish.type.GenericFish;
 import com.aldren.modeling.animalia.subclass.fish.type.Shark;
 import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
 import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
+import com.aldren.modeling.animalia.subclass.mammal.type.Dolphin;
 
 /**
  * Hello world!
@@ -77,5 +78,11 @@ public class ModelingApp {
         System.out.println("Clownfish Color: " + clownFish.getColor());
         System.out.println("Eating other fish? " + clownFish.isEatOtherFish());
         System.out.println("Making jokes? " + clownFish.isMakeJokes());
+
+        /**
+         * Question #B3
+         */
+        Dolphin dolphin = new Dolphin();
+        dolphin.swim();
     }
 }
