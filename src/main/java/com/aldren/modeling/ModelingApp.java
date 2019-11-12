@@ -4,7 +4,10 @@ import com.aldren.modeling.animalia.subclass.bird.species.OrphanRooster;
 import com.aldren.modeling.animalia.subclass.bird.species.Rooster;
 import com.aldren.modeling.animalia.subclass.bird.type.Chicken;
 import com.aldren.modeling.animalia.subclass.bird.type.Duck;
+import com.aldren.modeling.animalia.subclass.bird.type.Parrot;
 import com.aldren.modeling.animalia.subclass.bird.type.SongBird;
+import com.aldren.modeling.animalia.subclass.mammal.type.Cat;
+import com.aldren.modeling.animalia.subclass.mammal.type.Dog;
 
 /**
  * Hello world!
@@ -37,5 +40,17 @@ public class ModelingApp {
 
         OrphanRooster orphanRooster = new OrphanRooster();
         orphanRooster.makeSound();
+
+        /**
+         * Question #A4
+         */
+        Parrot<Dog> dogParrot = new Parrot<>(new Dog());
+        dogParrot.makeSound();
+
+        Parrot<Cat> catParrot = new Parrot<>(new Cat());
+        catParrot.makeSound();
+
+        Parrot<Rooster> roosterParrot = new Parrot<>(new Rooster());
+        roosterParrot.makeSound();
     }
 }
